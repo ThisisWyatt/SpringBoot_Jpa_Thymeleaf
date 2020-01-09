@@ -16,7 +16,7 @@ import java.util.Optional;
 public interface UserService {
    void save (User user);
    void delete(String name);
-   Page<User> findAll(Pageable pageable);
+   Page<User> findAll();
    List<User> findByName(String name);
    Optional<User> findById(String id);
    List<User> findByNameLike(String name);
