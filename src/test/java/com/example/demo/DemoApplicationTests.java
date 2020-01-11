@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import com.example.demo.model.User;
+import com.example.demo.service.UserService;
 import com.example.demo.service.impl.UserServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -44,10 +45,10 @@ class DemoApplicationTests {
     }
 
     @Resource
-    private UserServiceImpl userService;
+    private UserService userService;
     @Test
     void testRepository(){
-        List<User> list=userService.findByNameLike("%王%");
+        List<User> list=userService.findByNameLike("%1        %");
         System.out.println("查询成功");
         for (User user : list) {
             System.out.println("id:" + user.getId() + " name:" + user.getName() + " password:" + user.getPassword());
